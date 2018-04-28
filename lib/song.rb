@@ -25,8 +25,16 @@ class Song
     @@all.last
   end
 
-  def self.create_by_name(name)
-    Song.new(name)
+  def self.find_by_name
+    binding.pry
+  end
+
+  def self.alphabetical
+    @@all.map{ |n| n.name}.sort
+  end
+
+  def self.destroy_all
+    @@all.clear
   end
 
 end
